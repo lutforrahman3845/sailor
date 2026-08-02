@@ -1,0 +1,67 @@
+import type { Metadata } from "next";
+import Image from "next/image";
+import Link from "next/link";
+import { RiArrowRightLine, RiTimeLine } from "react-icons/ri";
+import PageHero from "@/components/page-hero";
+import { getBlogPosts } from "@/lib/db/queries";
+
+export const metadata: Metadata = {
+  title: "Blog",
+  description: "Articles on yachts, destinations and the charter lifestyle.",
+};
+
+function formatDate(iso: string) {
+  return new Date(iso).toLocaleDateString("en-US", {
+    month: "long",
+    day: "numeric",
+    year: "numeric",
+  });
+}
+
+export default async function BlogPage() {
+  const posts = await getBlogPosts();
+
+  return (
+    <main className="mx-5 md:mx-10 lg:mx-14">
+      <PageHero
+        eyebrow="blogs and articles"
+        title="Articles on Yacht"
+        subtitle="Guides, fleet news and stories from the water."
+      />
+
+      <section className="py-14 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+        {posts.map((post) => (
+          <Link
+            key={post.id}
+            href={`/blog/${post.slug}`}
+            className="bg-white rounded-2xl shadow-sm ring-1 ring-gray-100 overflow-hidden flex flex-col group"
+          >
+            <div className="relative h-56 overflow-hidden">
+              <Image
+                src={post.cover_image_path}
+                alt={post.title}
+                fill
+                sizes="(min-width: 1280px) 33vw, (min-width: 768px) 50vw, 100vw"
+                className="object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <div className="p-5 flex flex-col flex-1">
+              <p className="text-xs font-medium text-muted flex items-center gap-2">
+                <RiTimeLine className="size-4" />
+                {formatDate(post.published_at)} · {post.author}
+              </p>
+              <h2 className="text-lg font-bold text-secondary mt-2 group-hover:text-primary transition-colors">
+                {post.title}
+              </h2>
+              <p className="text-sm text-secondary mt-2 flex-1">{post.excerpt}</p>
+              <span className="inline-flex items-center gap-1.5 text-sm font-bold text-primary mt-4">
+                Read article
+                <RiArrowRightLine className="size-4 transition-transform group-hover:translate-x-1" />
+              </span>
+            </div>
+          </Link>
+        ))}
+      </section>
+    </main>
+  );
+}
