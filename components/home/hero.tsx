@@ -1,7 +1,7 @@
 import type { CSSProperties } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { RiArrowRightLine, RiCompass3Line } from "react-icons/ri";
+import { RiArrowRightLine, RiStarFill } from "react-icons/ri";
 
 const STATS = [
   { value: "10+", label: "Years chartering" },
@@ -24,41 +24,48 @@ export default function Hero() {
         {/* legibility scrim */}
         <div className="absolute inset-0 -z-10 bg-linear-to-b from-secondary/50 via-secondary/10 to-secondary/70" />
 
-        <div className="flex min-h-[70svh] max-h-208 flex-col items-center justify-center px-6 md:px-14 py-16 pb-24 sm:pb-28 text-center">
-          <p className="anim-fade-up font-south-catalonia text-2xl md:text-3xl text-white/95">
-            welcome aboard
+        <div className="flex min-h-[70svh] max-h-208 flex-col items-start justify-center px-6 md:px-14 py-16 pb-24 sm:pb-28 text-left">
+          <p className="anim-fade-up flex items-center gap-2 text-[11px] md:text-xs font-semibold uppercase tracking-[0.25em] text-white/90">
+            <span className="flex gap-0.5 text-amber-400" aria-hidden>
+              <RiStarFill className="size-3.5" />
+              <RiStarFill className="size-3.5" />
+              <RiStarFill className="size-3.5" />
+              <RiStarFill className="size-3.5" />
+              <RiStarFill className="size-3.5" />
+            </span>
+            Trusted by luxury travellers since 2016
           </p>
           <h1
-            className="anim-fade-up mt-2 font-south-catalonia text-white font-medium select-none leading-none text-[14vw] sm:text-6xl md:text-7xl lg:text-8xl"
+            className="anim-fade-up font-display mt-4 max-w-5xl text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-white leading-tight"
             style={{ "--anim-delay": "0.12s" } as CSSProperties}
           >
-            Sail into Luxury
+            Your Private All-Inclusive Yacht Vacation Begins{" "}
+            <span className="text-primary">Here</span>
           </h1>
           <p
-            className="anim-fade-up mx-auto mt-6 md:mt-8 max-w-xl text-sm sm:text-base md:text-lg text-white/85"
+            className="anim-fade-up mt-6 max-w-xl text-sm sm:text-base md:text-lg text-white/85"
             style={{ "--anim-delay": "0.24s" } as CSSProperties}
           >
-            Crewed yachts, hidden anchorages and coastlines worth crossing
-            oceans for — your charter starts here.
+            Sail the coastline your way — with a crewed luxury yacht, private
+            chef and an itinerary tailored entirely to you.
           </p>
 
           <div
-            className="anim-fade-up mt-8 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4"
+            className="anim-fade-up mt-8 flex w-full flex-col sm:w-auto sm:flex-row items-center gap-3 sm:gap-4"
             style={{ "--anim-delay": "0.36s" } as CSSProperties}
           >
             <Link
-              href="/yachts"
-              className="inline-flex w-full sm:w-auto items-center justify-center gap-2 px-8 py-4 rounded-xl bg-primary text-white font-bold shadow-md shadow-secondary/20 transition hover:-translate-y-0.5 hover:shadow-lg"
+              href="/contact"
+              className="inline-flex w-full sm:w-auto items-center justify-center gap-2 px-8 py-4 rounded-xl bg-white text-secondary font-bold shadow-md shadow-secondary/20 transition hover:-translate-y-0.5 hover:shadow-lg"
             >
-              Explore the Fleet
-              <RiArrowRightLine className="size-5" />
+              Plan My Trip
             </Link>
             <Link
-              href="/destinations"
-              className="inline-flex w-full sm:w-auto items-center justify-center gap-2 px-8 py-4 rounded-xl bg-white/15 backdrop-blur-md border border-white/40 text-white font-bold transition hover:bg-white/25"
+              href="/yachts"
+              className="inline-flex w-full sm:w-auto items-center justify-center gap-2 px-8 py-4 rounded-xl bg-secondary/80 backdrop-blur-md border border-white/20 text-white font-bold transition hover:bg-secondary"
             >
-              <RiCompass3Line className="size-5" />
-              View Destinations
+              Explore Our Yachts
+              <RiArrowRightLine className="size-5" />
             </Link>
           </div>
         </div>
