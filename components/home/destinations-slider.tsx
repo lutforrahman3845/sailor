@@ -28,17 +28,17 @@ export default function DestinationsSlider({
   return (
     <div className="relative">
       <div className="embla" ref={emblaRef}>
-        <div className="embla__container -ml-4 md:-ml-6">
+        <div className="embla__container -ml-2 md:-ml-3">
           {destinations.map((d, i) => {
             const active = i === selectedIndex;
             return (
               <div
                 key={d.id}
-                className="embla__slide pl-4 md:pl-6 flex-[0_0_82%] xs:flex-[0_0_74%] sm:flex-[0_0_55%] lg:flex-[0_0_40%] xl:flex-[0_0_33%]"
+                className="embla__slide pl-2 md:pl-3 flex-[0_0_82%] xs:flex-[0_0_74%] sm:flex-[0_0_55%] lg:flex-[0_0_40%] xl:flex-[0_0_33%]"
               >
                 <div
                   className={`relative aspect-3/4 max-h-140 w-full overflow-hidden rounded-2xl transition-all duration-500 ease-out ${
-                    active ? "scale-100 shadow-lg" : "scale-[0.88] opacity-60"
+                    active ? "scale-100 shadow-lg" : "scale-[0.93] opacity-60"
                   }`}
                 >
                   <Image
