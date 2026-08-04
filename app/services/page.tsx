@@ -16,7 +16,7 @@ export default async function ServicesPage() {
   const services = await getServices();
 
   return (
-    <main className="container mx-auto px-2 md:px-4">
+    <main className="w-full max-w-[96rem] mx-auto px-2 md:px-4">
       <PageHero
         eyebrow="sail with sailor"
         title="Our Services"

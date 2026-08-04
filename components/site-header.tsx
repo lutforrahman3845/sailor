@@ -25,7 +25,7 @@ export default function SiteHeader() {
 
   return (
     <header className="sticky top-0 z-50 bg-white/85 backdrop-blur-xl border-b border-gray-100">
-      <nav className="container mx-auto px-2 md:px-4 py-4 flex items-center justify-between gap-4">
+      <nav className="w-full max-w-[96rem] mx-auto px-2 md:px-4 py-4 flex items-center justify-between gap-4">
         <Logo />
 
         <ul className="hidden lg:flex items-center lg:gap-6 xl:gap-9">
