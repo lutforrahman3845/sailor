@@ -1,6 +1,6 @@
 import type { CSSProperties } from "react";
 
-/** Small banner used at the top of inner pages. */
+/** Text-only heading block at the top of inner pages. */
 export default function PageHero({
   eyebrow,
   title,
@@ -11,24 +11,29 @@ export default function PageHero({
   subtitle?: string;
 }) {
   return (
-    <div className="rounded-2xl overflow-hidden py-16 md:py-24 px-4 bg-linear-to-b from-secondary to-footer">
-      <p className="anim-fade-up font-south-catalonia text-center text-xl md:text-2xl text-white">
+    <div className="pt-14 md:pt-20 pb-4 text-center">
+      <p className="anim-fade-up font-south-catalonia text-xl md:text-2xl text-primary">
         {eyebrow}
       </p>
       <h1
-        className="anim-fade-up text-center text-3xl md:text-5xl text-white font-extrabold uppercase mt-2"
+        className="anim-fade-up text-3xl md:text-5xl text-secondary font-extrabold uppercase mt-2"
         style={{ "--anim-delay": "0.12s" } as CSSProperties}
       >
         {title}
       </h1>
       {subtitle && (
         <p
-          className="anim-fade-up text-center text-white/90 max-w-2xl mx-auto mt-4 text-sm md:text-base"
+          className="anim-fade-up text-muted max-w-2xl mx-auto mt-4 text-sm md:text-base"
           style={{ "--anim-delay": "0.24s" } as CSSProperties}
         >
           {subtitle}
         </p>
       )}
+      <span
+        className="anim-fade-up block h-px w-24 mx-auto mt-8 bg-secondary/15"
+        style={{ "--anim-delay": "0.36s" } as CSSProperties}
+        aria-hidden
+      />
     </div>
   );
 }

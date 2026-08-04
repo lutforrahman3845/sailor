@@ -1,18 +1,20 @@
 # Text-only inner-page headers
 
 Date: 2026-08-04 — Status: approved by user
+Revised same day: user chose pure text with no panel at all (was: navy
+gradient panel).
 
 ## Goal
 
 Remove the background photos from the six inner-page headers. Headers become
-text on a deep navy gradient panel.
+plain text on the white page — no card or panel.
 
 ## Changes
 
-- `components/page-hero.tsx`: drop the `<Image>`, the scrim overlay, the
-  Ken Burns class and the `image` prop. Panel background becomes a
-  `secondary → footer` navy gradient; shape, text styles and fade-up
-  entrance animations are unchanged.
+- `components/page-hero.tsx`: no `<Image>`, no scrim, no panel background.
+  Centered text block: South Catalonia eyebrow in teal, uppercase navy
+  title, muted subtitle, thin hairline underneath. Fade-up entrance
+  animations kept.
 - The six pages (`/yachts`, `/destinations`, `/services`, `/about`, `/blog`,
   `/contact`) stop passing `image`.
 - Untouched: home hero (keeps its photo) and the About navy quote band
