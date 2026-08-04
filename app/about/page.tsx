@@ -56,7 +56,6 @@ export default async function AboutPage() {
         eyebrow="about us"
         title="Sail Excellence Is Our Promise"
         subtitle="Welcome to our premier yacht charter service, where luxury meets adventure on the open seas."
-        image="/assets/page-hero-about.webp"
       />
 
       {/* Story intro — editorial split */}

@@ -22,7 +22,6 @@ export default async function DestinationsPage() {
         eyebrow="where to sail"
         title="Popular Destinations"
         subtitle="From the Caribbean trade winds to the Aegean meltemi — pick a coastline and we'll put a yacht under you."
-        image="/assets/page-hero-destinations.webp"
       />
 
       <section className="py-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">

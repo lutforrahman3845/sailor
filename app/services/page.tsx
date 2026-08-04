@@ -21,7 +21,6 @@ export default async function ServicesPage() {
         eyebrow="sail with sailor"
         title="Our Services"
         subtitle="A charter is more than a boat. These are the things our team takes care of on every booking."
-        image="/assets/page-hero-services.webp"
       />
 
       <section className="py-14">

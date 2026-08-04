@@ -16,7 +16,6 @@ export default function ContactPage() {
         eyebrow="get in touch"
         title="Contact Us"
         subtitle="Questions, custom itineraries or press — we answer within one business day."
-        image="/assets/page-hero-contact.webp"
       />
 
       <section className="py-14 grid grid-cols-1 xl:grid-cols-3 gap-10">

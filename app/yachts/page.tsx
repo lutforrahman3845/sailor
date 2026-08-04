@@ -27,7 +27,6 @@ export default async function YachtsPage({
         eyebrow="our fleet"
         title="Yacht Series"
         subtitle="Every yacht comes fully crewed, provisioned and ready to sail. Pick your boat — we handle the rest."
-        image="/assets/page-hero-yachts.webp"
       />
 
       <section className="py-14">

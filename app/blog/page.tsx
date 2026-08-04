@@ -28,7 +28,6 @@ export default async function BlogPage() {
         eyebrow="blogs and articles"
         title="Articles on Yacht"
         subtitle="Guides, fleet news and stories from the water."
-        image="/assets/page-hero-blog.webp"
       />
 
       <section className="py-14 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
