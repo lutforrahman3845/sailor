@@ -78,17 +78,25 @@ export default async function AboutPage() {
       {/* Story */}
       <section className="py-14 md:py-20 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
         <Reveal className="relative pb-12">
-          <div className="relative aspect-4/3 rounded-3xl overflow-hidden">
+          <div className="relative w-[74%] h-80 md:h-104 rounded-3xl overflow-hidden">
             <Image
               src="/assets/about-1.webp"
               alt="Yacht cruising along a rocky coastline"
               fill
-              sizes="(min-width: 1024px) 46vw, 96vw"
+              sizes="(min-width: 1024px) 37vw, 74vw"
               className="object-cover"
             />
           </div>
-          {/* badge sits on the image rather than floating beside it */}
-          <div className="absolute top-5 left-5 size-24 md:size-28 rounded-full bg-white/95 backdrop-blur-sm shadow-xl ring-1 ring-black/5 flex flex-col items-center justify-center text-center">
+          <div className="absolute bottom-0 right-0 w-1/2 h-48 md:h-64 rounded-2xl overflow-hidden border-8 border-white shadow-xl">
+            <Image
+              src="/assets/about-2.webp"
+              alt="Guests relaxing on a yacht deck"
+              fill
+              sizes="(min-width: 1024px) 25vw, 50vw"
+              className="object-cover"
+            />
+          </div>
+          <div className="absolute top-6 right-2 md:right-10 size-24 md:size-28 rounded-full bg-white shadow-xl ring-1 ring-black/5 flex flex-col items-center justify-center text-center">
             <span className="text-3xl md:text-4xl font-extrabold text-primary leading-none">
               10
             </span>
@@ -97,15 +105,6 @@ export default async function AboutPage() {
               <br />
               at sea
             </span>
-          </div>
-          <div className="absolute bottom-0 right-4 w-2/5 aspect-square rounded-2xl overflow-hidden border-8 border-white shadow-xl">
-            <Image
-              src="/assets/about-2.webp"
-              alt="Guests relaxing on a yacht deck"
-              fill
-              sizes="(min-width: 1024px) 19vw, 38vw"
-              className="object-cover"
-            />
           </div>
         </Reveal>
 
