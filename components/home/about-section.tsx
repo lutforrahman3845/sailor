@@ -14,7 +14,7 @@ export default function AboutSection() {
       <div className="mt-10 flex flex-col xl:flex-row items-center gap-8">
         <div className="w-full xl:w-7/12 md:grid md:grid-cols-8 gap-12">
           <div className="col-span-4 hidden md:block">
-            <div className="relative w-full h-122.5 rounded-2xl overflow-hidden">
+            <div className="relative w-full aspect-4/5 rounded-2xl overflow-hidden">
               <Image
                 src="/assets/about-1.webp"
                 alt="Yacht cruising"
@@ -29,7 +29,7 @@ export default function AboutSection() {
               Years Of Experience
             </p>
           </div>
-          <div className="col-span-4 2xl:col-span-3 w-full h-96 md:h-131.5 md:mt-10 relative rounded-t-3xl rounded-bl-3xl overflow-hidden">
+          <div className="col-span-4 w-full aspect-4/5 md:mt-10 relative rounded-t-3xl rounded-bl-3xl overflow-hidden">
             <Image
               src="/assets/about-2.webp"
               alt="Guests on deck"

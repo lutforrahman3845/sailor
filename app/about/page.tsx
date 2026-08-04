@@ -78,7 +78,7 @@ export default async function AboutPage() {
       {/* Story */}
       <section className="py-14 md:py-20 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
         <Reveal className="relative pb-12">
-          <div className="relative w-[74%] h-96 md:h-130 rounded-3xl overflow-hidden">
+          <div className="relative w-[74%] h-80 md:h-104 rounded-3xl overflow-hidden">
             <Image
               src="/assets/about-1.webp"
               alt="Yacht cruising along a rocky coastline"
@@ -87,7 +87,7 @@ export default async function AboutPage() {
               className="object-cover"
             />
           </div>
-          <div className="absolute bottom-0 right-0 w-1/2 h-60 md:h-80 rounded-2xl overflow-hidden border-8 border-white shadow-xl">
+          <div className="absolute bottom-0 right-0 w-1/2 h-48 md:h-64 rounded-2xl overflow-hidden border-8 border-white shadow-xl">
             <Image
               src="/assets/about-2.webp"
               alt="Guests relaxing on a yacht deck"
