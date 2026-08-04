@@ -30,7 +30,7 @@ export default async function BlogPage() {
         subtitle="Guides, fleet news and stories from the water."
       />
 
-      <section className="py-10 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+      <section className="py-10 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
         {posts.map((post, i) => (
           <Reveal key={post.id} delay={Math.min(i * 0.06, 0.3)}>
           <Link

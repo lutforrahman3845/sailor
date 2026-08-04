@@ -43,7 +43,7 @@ export default function ServicesSection({ services }: { services: ServiceRow[] }
     <section id="services" className="py-10">
       <SectionHeading eyebrow="sail with sailor" title="Why Sail with Us" className="mb-12" />
       <div className="flex flex-col xl:flex-row items-center gap-14 xl:gap-20 justify-center">
-        <div className="w-full xl:w-1/3 2xl:w-1/4 grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-1 gap-8 lg:gap-10">
+        <div className="w-full xl:w-1/3 2xl:w-1/4 grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-1 gap-6">
           {services.slice(0, 3).map((s) => (
             <ServiceItem key={s.id} service={s} />
           ))}

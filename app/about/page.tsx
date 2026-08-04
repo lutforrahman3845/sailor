@@ -171,7 +171,7 @@ export default async function AboutPage() {
             className="mb-12"
           />
         </Reveal>
-        <ol className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-10 xl:gap-8">
+        <ol className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6">
           {STEPS.map((step, i) => (
             <Reveal key={step.number} delay={i * 0.08}>
               <li className="border-t-2 border-primary/25 pt-5 h-full">
@@ -208,7 +208,7 @@ export default async function AboutPage() {
             className="mb-12"
           />
         </Reveal>
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
           {services.map((s, i) => (
             <Reveal key={s.id} delay={Math.min(i * 0.06, 0.3)}>
               <ServiceItem service={s} />
@@ -237,7 +237,7 @@ export default async function AboutPage() {
             className="mb-12"
           />
         </Reveal>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           <Reveal>
             <div className="h-full p-8 rounded-2xl bg-primary/5 ring-1 ring-primary/15">
               <h3 className="text-lg font-semibold text-secondary">

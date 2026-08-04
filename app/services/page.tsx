@@ -24,7 +24,7 @@ export default async function ServicesPage() {
       />
 
       <section className="py-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
           {services.map((s, i) => (
             <Reveal
               key={s.id}
