@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { RiArrowRightLine, RiTimeLine } from "react-icons/ri";
 import PageHero from "@/components/page-hero";
+import Reveal from "@/components/reveal";
 import { getBlogPosts } from "@/lib/db/queries";
 
 export const metadata: Metadata = {
@@ -27,14 +28,15 @@ export default async function BlogPage() {
         eyebrow="blogs and articles"
         title="Articles on Yacht"
         subtitle="Guides, fleet news and stories from the water."
+        image="/assets/page-hero-blog.webp"
       />
 
       <section className="py-14 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
-        {posts.map((post) => (
+        {posts.map((post, i) => (
+          <Reveal key={post.id} delay={Math.min(i * 0.06, 0.3)}>
           <Link
-            key={post.id}
             href={`/blog/${post.slug}`}
-            className="bg-white rounded-2xl shadow-sm ring-1 ring-gray-100 overflow-hidden flex flex-col group"
+            className="bg-white rounded-2xl shadow-sm ring-1 ring-gray-100 overflow-hidden flex flex-col group h-full"
           >
             <div className="relative h-56 overflow-hidden">
               <Image
@@ -60,6 +62,7 @@ export default async function BlogPage() {
               </span>
             </div>
           </Link>
+          </Reveal>
         ))}
       </section>
     </main>

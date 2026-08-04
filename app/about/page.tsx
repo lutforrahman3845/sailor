@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import PageHero from "@/components/page-hero";
+import Reveal from "@/components/reveal";
 import SectionHeading from "@/components/section-heading";
 import { getTestimonials } from "@/lib/db/queries";
 import TestimonialsSlider from "@/components/home/testimonials-slider";
@@ -28,18 +29,19 @@ export default async function AboutPage() {
         eyebrow="about us"
         title="Sail Excellence Is Our Promise"
         subtitle="Welcome to our premier yacht charter service, where luxury meets adventure on the open seas."
+        image="/assets/page-hero-about.webp"
       />
 
       <section className="py-14 flex flex-col xl:flex-row items-center gap-10">
-        <div className="w-full xl:w-1/2 grid grid-cols-2 gap-6">
+        <Reveal className="w-full xl:w-1/2 grid grid-cols-2 gap-6">
           <div className="relative h-80 md:h-[440px] rounded-2xl overflow-hidden">
             <Image src="/assets/about-1.webp" alt="Yacht cruising" fill sizes="(min-width: 1280px) 25vw, 50vw" className="object-cover" />
           </div>
           <div className="relative h-80 md:h-[440px] mt-10 rounded-2xl overflow-hidden">
             <Image src="/assets/about-2.webp" alt="Guests on deck" fill sizes="(min-width: 1280px) 25vw, 50vw" className="object-cover" />
           </div>
-        </div>
-        <div className="w-full xl:w-1/2">
+        </Reveal>
+        <Reveal className="w-full xl:w-1/2" delay={0.15}>
           <h2 className="text-2xl md:text-4xl font-bold text-secondary">
             Book Your Dream Yacht Today!
           </h2>
@@ -70,12 +72,14 @@ export default async function AboutPage() {
           >
             Meet the Fleet
           </Link>
-        </div>
+        </Reveal>
       </section>
 
       <section className="py-14">
-        <SectionHeading eyebrow="testimonial" title="The Voice of Experience" className="mb-12" />
-        <TestimonialsSlider testimonials={testimonials} />
+        <Reveal>
+          <SectionHeading eyebrow="testimonial" title="The Voice of Experience" className="mb-12" />
+          <TestimonialsSlider testimonials={testimonials} />
+        </Reveal>
       </section>
     </main>
   );

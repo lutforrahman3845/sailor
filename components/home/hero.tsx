@@ -1,3 +1,4 @@
+import type { CSSProperties } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { RiArrowRightLine, RiCompass3Line } from "react-icons/ri";
@@ -13,29 +14,38 @@ export default function Hero() {
     <div className="mx-5 md:mx-10 lg:mx-14">
       <div className="relative rounded-2xl md:rounded-3xl overflow-hidden">
         <Image
-          src="/assets/hero-banner.webp"
+          src="/assets/hero-banner-new.webp"
           alt="Superyacht anchored in a turquoise bay"
           fill
           priority
           sizes="100vw"
-          className="object-cover -z-10"
+          className="object-cover -z-10 anim-hero-zoom"
         />
         {/* legibility scrim */}
         <div className="absolute inset-0 -z-10 bg-gradient-to-b from-secondary/50 via-secondary/10 to-secondary/70" />
 
         <div className="px-6 md:px-14 pt-24 pb-32 sm:pt-28 sm:pb-36 md:pt-36 md:pb-44 lg:pt-44 lg:pb-56 text-center">
-          <p className="font-south-catalonia text-2xl md:text-3xl text-white/95">
+          <p className="anim-fade-up font-south-catalonia text-2xl md:text-3xl text-white/95">
             welcome aboard
           </p>
-          <h1 className="mt-2 font-south-catalonia text-white font-medium select-none leading-none text-[16vw] sm:text-7xl md:text-8xl lg:text-9xl xl:text-[150px]">
+          <h1
+            className="anim-fade-up mt-2 font-south-catalonia text-white font-medium select-none leading-none text-[16vw] sm:text-7xl md:text-8xl lg:text-9xl xl:text-[150px]"
+            style={{ "--anim-delay": "0.12s" } as CSSProperties}
+          >
             Sail into Luxury
           </h1>
-          <p className="mx-auto mt-8 md:mt-10 max-w-xl text-sm sm:text-base md:text-lg text-white/85">
+          <p
+            className="anim-fade-up mx-auto mt-8 md:mt-10 max-w-xl text-sm sm:text-base md:text-lg text-white/85"
+            style={{ "--anim-delay": "0.24s" } as CSSProperties}
+          >
             Crewed yachts, hidden anchorages and coastlines worth crossing
             oceans for — your charter starts here.
           </p>
 
-          <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
+          <div
+            className="anim-fade-up mt-8 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4"
+            style={{ "--anim-delay": "0.36s" } as CSSProperties}
+          >
             <Link
               href="/yachts"
               className="inline-flex w-full sm:w-auto items-center justify-center gap-2 px-8 py-4 rounded-xl bg-primary text-white font-bold shadow-md shadow-secondary/20 transition hover:-translate-y-0.5 hover:shadow-lg"
@@ -55,7 +65,10 @@ export default function Hero() {
       </div>
 
       {/* floating stats strip — sits where the old search bar used to */}
-      <div className="relative -mt-12 sm:-mt-14 mx-auto w-11/12 sm:w-fit">
+      <div
+        className="anim-fade-up relative -mt-12 sm:-mt-14 mx-auto w-11/12 sm:w-fit"
+        style={{ "--anim-delay": "0.5s" } as CSSProperties}
+      >
         <dl className="grid grid-cols-3 divide-x divide-gray-200 rounded-2xl bg-white/85 backdrop-blur-xl shadow-md ring-1 ring-black/5 px-2 py-5 sm:px-6 md:px-10">
           {STATS.map((stat) => (
             <div key={stat.label} className="px-3 sm:px-8 md:px-12 text-center">

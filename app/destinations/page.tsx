@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { RiMapPin2Fill } from "react-icons/ri";
 import PageHero from "@/components/page-hero";
+import Reveal from "@/components/reveal";
 import { getDestinations, getYachts } from "@/lib/db/queries";
 
 export const metadata: Metadata = {
@@ -21,13 +22,18 @@ export default async function DestinationsPage() {
         eyebrow="where to sail"
         title="Popular Destinations"
         subtitle="From the Caribbean trade winds to the Aegean meltemi — pick a coastline and we'll put a yacht under you."
+        image="/assets/page-hero-destinations.webp"
       />
 
       <section className="py-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-        {destinations.map((d) => {
+        {destinations.map((d, i) => {
           const count = yachtCount(d.id);
           return (
-            <div key={d.id} className="bg-white rounded-2xl shadow-sm ring-1 ring-gray-100 overflow-hidden flex flex-col">
+            <Reveal
+              key={d.id}
+              delay={Math.min(i * 0.06, 0.3)}
+              className="bg-white rounded-2xl shadow-sm ring-1 ring-gray-100 overflow-hidden flex flex-col"
+            >
               <div className="relative h-64">
                 <Image
                   src={d.image_path}
@@ -58,7 +64,7 @@ export default async function DestinationsPage() {
                   )}
                 </div>
               </div>
-            </div>
+            </Reveal>
           );
         })}
       </section>

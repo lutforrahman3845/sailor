@@ -1,3 +1,4 @@
+import Reveal from "@/components/reveal";
 import SectionHeading from "@/components/section-heading";
 import YachtCard from "@/components/yacht-card";
 import Hero from "@/components/home/hero";
@@ -35,34 +36,52 @@ export default async function HomePage() {
       <Hero />
 
       <div className="mx-5 md:mx-10 lg:mx-14">
-        <AboutSection />
+        <Reveal>
+          <AboutSection />
+        </Reveal>
 
         <section id="yachts" className="py-14">
-          <SectionHeading eyebrow="our popular" title="Yacht Series" />
+          <Reveal>
+            <SectionHeading eyebrow="our popular" title="Yacht Series" />
+          </Reveal>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 mt-8 md:mt-14 gap-10">
-            {featuredYachts.map((yacht) => (
-              <YachtCard key={yacht.id} yacht={yacht} />
+            {featuredYachts.map((yacht, i) => (
+              <Reveal key={yacht.id} delay={Math.min(i * 0.06, 0.3)}>
+                <YachtCard yacht={yacht} />
+              </Reveal>
             ))}
           </div>
         </section>
 
         <section id="destinations" className="py-14">
-          <SectionHeading eyebrow="where to sail" title="Popular Destinations" className="mb-12" />
-          <DestinationsSlider destinations={sliderDestinations} />
+          <Reveal>
+            <SectionHeading eyebrow="where to sail" title="Popular Destinations" className="mb-12" />
+            <DestinationsSlider destinations={sliderDestinations} />
+          </Reveal>
         </section>
 
-        <ServicesSection services={services} />
+        <Reveal>
+          <ServicesSection services={services} />
+        </Reveal>
 
-        <SeasonalOffer />
+        <Reveal>
+          <SeasonalOffer />
+        </Reveal>
 
-        <BlogSection posts={posts} />
+        <Reveal>
+          <BlogSection posts={posts} />
+        </Reveal>
 
         <section className="py-14">
-          <SectionHeading eyebrow="testimonial" title="The Voice of Experience" className="mb-12" />
-          <TestimonialsSlider testimonials={testimonials} />
+          <Reveal>
+            <SectionHeading eyebrow="testimonial" title="The Voice of Experience" className="mb-12" />
+            <TestimonialsSlider testimonials={testimonials} />
+          </Reveal>
         </section>
 
-        <NewsletterSection />
+        <Reveal>
+          <NewsletterSection />
+        </Reveal>
       </div>
     </main>
   );

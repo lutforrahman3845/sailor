@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { RiMailLine, RiMapPin2Line, RiPhoneLine } from "react-icons/ri";
 import PageHero from "@/components/page-hero";
+import Reveal from "@/components/reveal";
 import ContactForm from "@/components/contact-form";
 
 export const metadata: Metadata = {
@@ -15,10 +16,11 @@ export default function ContactPage() {
         eyebrow="get in touch"
         title="Contact Us"
         subtitle="Questions, custom itineraries or press — we answer within one business day."
+        image="/assets/page-hero-contact.webp"
       />
 
       <section className="py-14 grid grid-cols-1 xl:grid-cols-3 gap-10">
-        <div className="xl:col-span-1 space-y-6">
+        <Reveal className="xl:col-span-1 space-y-6">
           <div className="p-6 bg-white rounded-2xl shadow-sm ring-1 ring-gray-100">
             <h2 className="text-lg font-bold text-secondary flex items-center gap-2">
               <RiMapPin2Line className="size-5 text-primary" /> Visit us
@@ -46,12 +48,15 @@ export default function ContactPage() {
             </a>
             <p className="text-sm text-muted mt-1">Mon–Sat, 9am–6pm EST</p>
           </div>
-        </div>
+        </Reveal>
 
-        <div className="xl:col-span-2 p-6 md:p-10 bg-white rounded-2xl shadow-sm ring-1 ring-gray-100">
+        <Reveal
+          delay={0.15}
+          className="xl:col-span-2 p-6 md:p-10 bg-white rounded-2xl shadow-sm ring-1 ring-gray-100"
+        >
           <h2 className="text-2xl font-bold text-secondary mb-6">Send us a message</h2>
           <ContactForm />
-        </div>
+        </Reveal>
       </section>
     </main>
   );

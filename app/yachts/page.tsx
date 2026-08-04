@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import PageHero from "@/components/page-hero";
+import Reveal from "@/components/reveal";
 import YachtCard from "@/components/yacht-card";
 import { getYachts } from "@/lib/db/queries";
 
@@ -26,6 +27,7 @@ export default async function YachtsPage({
         eyebrow="our fleet"
         title="Yacht Series"
         subtitle="Every yacht comes fully crewed, provisioned and ready to sail. Pick your boat — we handle the rest."
+        image="/assets/page-hero-yachts.webp"
       />
 
       <section className="py-14">
@@ -40,8 +42,10 @@ export default async function YachtsPage({
           </div>
         ) : (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10">
-            {yachts.map((y) => (
-              <YachtCard key={y.id} yacht={y} />
+            {yachts.map((y, i) => (
+              <Reveal key={y.id} delay={Math.min(i * 0.06, 0.3)}>
+                <YachtCard yacht={y} />
+              </Reveal>
             ))}
           </div>
         )}

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import PageHero from "@/components/page-hero";
+import Reveal from "@/components/reveal";
 import SectionHeading from "@/components/section-heading";
 import { ServiceItem } from "@/components/home/services-section";
 import { getServices } from "@/lib/db/queries";
@@ -20,21 +21,27 @@ export default async function ServicesPage() {
         eyebrow="sail with sailor"
         title="Our Services"
         subtitle="A charter is more than a boat. These are the things our team takes care of on every booking."
+        image="/assets/page-hero-services.webp"
       />
 
       <section className="py-14">
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10">
-          {services.map((s) => (
-            <div key={s.id} className="p-6 bg-white rounded-2xl shadow-sm ring-1 ring-gray-100">
+          {services.map((s, i) => (
+            <Reveal
+              key={s.id}
+              delay={Math.min(i * 0.06, 0.3)}
+              className="p-6 bg-white rounded-2xl shadow-sm ring-1 ring-gray-100"
+            >
               <ServiceItem service={s} />
-            </div>
+            </Reveal>
           ))}
         </div>
       </section>
 
       <section className="py-14">
-        <SectionHeading eyebrow="ready when you are" title="Sail with us" className="mb-8" />
-        <div className="flex flex-col xl:flex-row items-center gap-10 justify-center">
+        <Reveal>
+          <SectionHeading eyebrow="ready when you are" title="Sail with us" className="mb-8" />
+          <div className="flex flex-col xl:flex-row items-center gap-10 justify-center">
           <Image
             src="/assets/yacht-illustration.webp"
             alt="Yacht illustration"
@@ -54,7 +61,8 @@ export default async function ServicesPage() {
               Get In Touch
             </Link>
           </div>
-        </div>
+          </div>
+        </Reveal>
       </section>
     </main>
   );
