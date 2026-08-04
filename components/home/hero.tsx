@@ -14,8 +14,8 @@ export default function Hero() {
     <div className="max-w-7xl mx-auto px-2 md:px-4">
       <div className="relative rounded-2xl md:rounded-3xl overflow-hidden">
         <Image
-          src="/assets/hero-banner-new.webp"
-          alt="Superyacht anchored in a turquoise bay"
+          src="/assets/heroSection.jpg"
+          alt="Superyacht at dusk over a turquoise reef"
           fill
           priority
           sizes="100vw"
@@ -24,7 +24,7 @@ export default function Hero() {
         {/* legibility scrim */}
         <div className="absolute inset-0 -z-10 bg-linear-to-b from-secondary/50 via-secondary/10 to-secondary/70" />
 
-        <div className="px-6 md:px-14 pt-20 pb-28 sm:pt-24 sm:pb-32 md:pt-28 md:pb-36 lg:pt-36 lg:pb-44 text-center">
+        <div className="flex min-h-[70svh] max-h-208 flex-col items-center justify-center px-6 md:px-14 py-16 pb-24 sm:pb-28 text-center">
           <p className="anim-fade-up font-south-catalonia text-2xl md:text-3xl text-white/95">
             welcome aboard
           </p>
