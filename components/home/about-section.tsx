@@ -8,7 +8,7 @@ const AVATARS = ["/assets/avatar-1.webp", "/assets/avatar-2.webp", "/assets/avat
 
 export default function AboutSection() {
   return (
-    <section id="about" className="py-14">
+    <section id="about" className="py-10">
       <SectionHeading eyebrow="about us" title="Sail excellence is our promise" />
 
       <div className="mt-10 flex flex-col xl:flex-row items-center gap-8">
@@ -44,7 +44,7 @@ export default function AboutSection() {
         </div>
 
         <div className="w-full xl:w-[35%]">
-          <h3 className="md:max-w-xl text-2xl md:text-3xl lg:text-4xl xl:text-5xl text-secondary font-bold mt-8 xl:mt-0">
+          <h3 className="md:max-w-xl text-2xl md:text-3xl lg:text-4xl text-secondary font-semibold mt-8 xl:mt-0">
             Book Your Dream Yacht Today!
           </h3>
           <p className="md:max-w-xl text-base md:text-lg font-normal text-secondary/90 mt-3 leading-relaxed">

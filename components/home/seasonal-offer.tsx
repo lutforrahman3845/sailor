@@ -17,7 +17,7 @@ function Stat({ Icon, value, label }: { Icon: IconType; value: string; label: st
 
 export default function SeasonalOffer() {
   return (
-    <section id="seasonal-offer" className="py-14">
+    <section id="seasonal-offer" className="py-10">
       <div className="relative w-full rounded-2xl overflow-hidden">
         <Image
           src="/assets/offer-pattern.webp"
@@ -33,7 +33,7 @@ export default function SeasonalOffer() {
             <p className="text-xl md:text-2xl text-white font-south-catalonia font-medium mb-2">
               Seasonal Offer
             </p>
-            <h2 className="text-3xl md:text-4xl 2xl:text-5xl text-white font-extrabold max-w-sm uppercase mb-10">
+            <h2 className="text-3xl md:text-4xl text-white font-semibold max-w-sm mb-8">
               15% off for booking this summer.
             </h2>
             <div className="flex items-center gap-8 xl:gap-12 mb-10">

@@ -24,18 +24,18 @@ export default function Hero() {
         {/* legibility scrim */}
         <div className="absolute inset-0 -z-10 bg-linear-to-b from-secondary/50 via-secondary/10 to-secondary/70" />
 
-        <div className="px-6 md:px-14 pt-24 pb-32 sm:pt-28 sm:pb-36 md:pt-36 md:pb-44 lg:pt-44 lg:pb-56 text-center">
+        <div className="px-6 md:px-14 pt-20 pb-28 sm:pt-24 sm:pb-32 md:pt-28 md:pb-36 lg:pt-36 lg:pb-44 text-center">
           <p className="anim-fade-up font-south-catalonia text-2xl md:text-3xl text-white/95">
             welcome aboard
           </p>
           <h1
-            className="anim-fade-up mt-2 font-south-catalonia text-white font-medium select-none leading-none text-[16vw] sm:text-7xl md:text-8xl lg:text-9xl xl:text-[150px]"
+            className="anim-fade-up mt-2 font-south-catalonia text-white font-medium select-none leading-none text-[14vw] sm:text-6xl md:text-7xl lg:text-8xl"
             style={{ "--anim-delay": "0.12s" } as CSSProperties}
           >
             Sail into Luxury
           </h1>
           <p
-            className="anim-fade-up mx-auto mt-8 md:mt-10 max-w-xl text-sm sm:text-base md:text-lg text-white/85"
+            className="anim-fade-up mx-auto mt-6 md:mt-8 max-w-xl text-sm sm:text-base md:text-lg text-white/85"
             style={{ "--anim-delay": "0.24s" } as CSSProperties}
           >
             Crewed yachts, hidden anchorages and coastlines worth crossing

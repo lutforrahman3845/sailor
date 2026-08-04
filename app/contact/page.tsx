@@ -18,7 +18,7 @@ export default function ContactPage() {
         subtitle="Questions, custom itineraries or press — we answer within one business day."
       />
 
-      <section className="py-14 grid grid-cols-1 xl:grid-cols-3 gap-10">
+      <section className="py-10 grid grid-cols-1 xl:grid-cols-3 gap-10">
         <Reveal className="xl:col-span-1 space-y-6">
           <div className="p-6 bg-white rounded-2xl shadow-sm ring-1 ring-gray-100">
             <h2 className="text-lg font-bold text-secondary flex items-center gap-2">

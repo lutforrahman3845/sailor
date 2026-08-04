@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Montserrat, Poppins } from "next/font/google";
+import { Cormorant_Garamond, Montserrat } from "next/font/google";
 import localFont from "next/font/local";
 import SiteHeader from "@/components/site-header";
 import SiteFooter from "@/components/site-footer";
@@ -10,10 +10,10 @@ const montserrat = Montserrat({
   variable: "--font-montserrat",
 });
 
-const poppins = Poppins({
+const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-  variable: "--font-poppins",
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-cormorant",
 });
 
 const southCatalonia = localFont({
@@ -38,7 +38,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${montserrat.variable} ${poppins.variable} ${southCatalonia.variable} h-full antialiased`}
+      className={`${montserrat.variable} ${cormorant.variable} ${southCatalonia.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
         <SiteHeader />

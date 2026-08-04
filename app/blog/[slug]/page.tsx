@@ -48,13 +48,13 @@ export default async function BlogPostPage({
           / <span className="text-secondary">{post.title}</span>
         </nav>
 
-        <h1 className="text-3xl md:text-5xl font-extrabold text-secondary">{post.title}</h1>
+        <h1 className="text-3xl md:text-4xl font-semibold text-secondary">{post.title}</h1>
         <p className="text-sm font-medium text-muted flex items-center gap-2 mt-4">
           <RiTimeLine className="size-4" />
           {formatDate(post.published_at)} · {post.author}
         </p>
 
-        <div className="relative w-full h-72 md:h-[420px] rounded-2xl overflow-hidden mt-8">
+        <div className="relative w-full h-72 md:h-105 rounded-2xl overflow-hidden mt-8">
           <Image
             src={post.cover_image_path}
             alt={post.title}

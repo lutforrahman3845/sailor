@@ -53,7 +53,7 @@ export default async function YachtDetailPage({
 
       <div className="grid grid-cols-1 xl:grid-cols-2 gap-10">
         <div>
-          <div className="relative w-full h-[420px] rounded-2xl overflow-hidden">
+          <div className="relative w-full h-105 rounded-2xl overflow-hidden">
             <Image
               src={primary?.image_path ?? yacht.image_path}
               alt={primary?.alt ?? yacht.name}
@@ -76,7 +76,7 @@ export default async function YachtDetailPage({
 
         <div>
           <p className="font-south-catalonia text-xl md:text-2xl text-primary">our fleet</p>
-          <h1 className="text-3xl md:text-5xl font-extrabold text-secondary uppercase mt-1">
+          <h1 className="text-3xl md:text-4xl font-semibold text-secondary mt-1">
             {yacht.name}
           </h1>
           <p className="text-secondary text-base font-medium flex items-center gap-2 mt-3">

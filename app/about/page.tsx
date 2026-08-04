@@ -59,7 +59,7 @@ export default async function AboutPage() {
       />
 
       {/* Story intro — editorial split */}
-      <section className="py-20 md:py-28 grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20 items-center">
+      <section className="py-14 md:py-20 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
         <Reveal className="relative pb-12">
           <div className="relative w-[74%] h-96 md:h-130 rounded-3xl overflow-hidden">
             <Image
@@ -96,9 +96,9 @@ export default async function AboutPage() {
             <span className="h-px w-10 bg-primary" aria-hidden />
             Our story
           </p>
-          <h2 className="mt-5 text-3xl md:text-5xl font-bold text-secondary leading-tight">
+          <h2 className="mt-5 text-3xl md:text-4xl font-semibold text-secondary leading-tight">
             A decade of{" "}
-            <span className="font-south-catalonia font-medium text-primary text-4xl md:text-6xl">
+            <span className="font-south-catalonia font-medium text-primary text-4xl md:text-5xl">
               quiet luxury
             </span>
             <br />
@@ -132,11 +132,11 @@ export default async function AboutPage() {
       <Reveal>
         <section
           aria-label="Sailor in numbers"
-          className="border-y border-secondary/10 py-12 md:py-16 grid grid-cols-2 md:grid-cols-4 gap-y-10 md:divide-x md:divide-secondary/10"
+          className="border-y border-secondary/10 py-10 md:py-12 grid grid-cols-2 md:grid-cols-4 gap-y-10 md:divide-x md:divide-secondary/10"
         >
           {STATS.map((s) => (
             <div key={s.label} className="px-4 text-center">
-              <p className="text-5xl md:text-6xl font-extrabold tracking-tight text-secondary">
+              <p className="font-cormorant text-4xl md:text-5xl font-bold text-secondary">
                 {s.value}
               </p>
               <p className="mt-3 text-[11px] font-semibold uppercase tracking-[0.3em] text-muted">
@@ -149,7 +149,7 @@ export default async function AboutPage() {
 
       {/* Navy quote band */}
       <Reveal>
-        <section className="relative mt-20 md:mt-28 rounded-3xl overflow-hidden bg-secondary">
+        <section className="relative mt-14 md:mt-20 rounded-3xl overflow-hidden bg-secondary">
           <Image
             src="/assets/page-hero-about.webp"
             alt=""
@@ -157,8 +157,8 @@ export default async function AboutPage() {
             sizes="100vw"
             className="object-cover opacity-20"
           />
-          <div className="relative px-6 py-20 md:py-28 text-center">
-            <p className="font-south-catalonia text-4xl md:text-6xl text-white leading-snug max-w-3xl mx-auto">
+          <div className="relative px-6 py-14 md:py-20 text-center">
+            <p className="font-south-catalonia text-3xl md:text-5xl text-white leading-snug max-w-3xl mx-auto">
               &ldquo;the boat is only half the holiday&rdquo;
             </p>
             <p className="mt-6 text-white/70 max-w-xl mx-auto text-sm md:text-base">
@@ -167,7 +167,7 @@ export default async function AboutPage() {
             </p>
             <Link
               href="/yachts"
-              className="inline-block mt-10 px-9 py-4 bg-primary rounded-xl text-white font-bold hover:opacity-90 transition-opacity"
+              className="inline-block mt-8 px-9 py-4 bg-primary rounded-xl text-white font-bold hover:opacity-90 transition-opacity"
             >
               Meet the Fleet
             </Link>
@@ -176,12 +176,12 @@ export default async function AboutPage() {
       </Reveal>
 
       {/* Values row */}
-      <section className="py-20 md:py-28">
+      <section className="py-14 md:py-20">
         <Reveal>
           <SectionHeading
             eyebrow="why sail with sailor"
             title="It's the Details"
-            className="mb-14"
+            className="mb-10"
           />
         </Reveal>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12">
@@ -194,7 +194,7 @@ export default async function AboutPage() {
                   </span>
                   <v.icon className="size-6 text-primary" aria-hidden />
                 </div>
-                <h3 className="mt-4 text-lg font-bold text-secondary">
+                <h3 className="mt-4 text-xl font-semibold text-secondary">
                   {v.title}
                 </h3>
                 <p className="mt-2 text-sm leading-6 text-muted">{v.copy}</p>
@@ -205,7 +205,7 @@ export default async function AboutPage() {
       </section>
 
       {/* Testimonials */}
-      <section className="pb-20">
+      <section className="pb-14">
         <Reveal>
           <SectionHeading
             eyebrow="testimonial"

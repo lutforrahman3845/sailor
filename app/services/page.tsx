@@ -23,7 +23,7 @@ export default async function ServicesPage() {
         subtitle="A charter is more than a boat. These are the things our team takes care of on every booking."
       />
 
-      <section className="py-14">
+      <section className="py-10">
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10">
           {services.map((s, i) => (
             <Reveal
@@ -37,7 +37,7 @@ export default async function ServicesPage() {
         </div>
       </section>
 
-      <section className="py-14">
+      <section className="py-10">
         <Reveal>
           <SectionHeading eyebrow="ready when you are" title="Sail with us" className="mb-8" />
           <div className="flex flex-col xl:flex-row items-center gap-10 justify-center">

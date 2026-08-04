@@ -16,7 +16,7 @@
 
 @theme inline {
   --font-montserrat: var(--font-montserrat);
-  --font-poppins: var(--font-poppins);
+  --font-cormorant: var(--font-cormorant);
   --font-south-catalonia: var(--font-south-catalonia);
 }
 
@@ -24,6 +24,17 @@ body {
   font-family: var(--font-montserrat), sans-serif;
   color: var(--color-secondary);
   background: #fff;
+}
+
+/* luxury serif display for headings — in the base layer so utility
+   classes (e.g. .font-south-catalonia) still override */
+@layer base {
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-cormorant), Georgia, serif;
+    letter-spacing: 0.01em;
+  }
 }
 
 /* visible keyboard focus everywhere */

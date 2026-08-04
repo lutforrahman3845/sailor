@@ -40,7 +40,7 @@ export default async function HomePage() {
           <AboutSection />
         </Reveal>
 
-        <section id="yachts" className="py-14">
+        <section id="yachts" className="py-10">
           <Reveal>
             <SectionHeading eyebrow="our popular" title="Yacht Series" />
           </Reveal>
@@ -53,7 +53,7 @@ export default async function HomePage() {
           </div>
         </section>
 
-        <section id="destinations" className="py-14">
+        <section id="destinations" className="py-10">
           <Reveal>
             <SectionHeading eyebrow="where to sail" title="Popular Destinations" className="mb-12" />
             <DestinationsSlider destinations={sliderDestinations} />
@@ -72,7 +72,7 @@ export default async function HomePage() {
           <BlogSection posts={posts} />
         </Reveal>
 
-        <section className="py-14">
+        <section className="py-10">
           <Reveal>
             <SectionHeading eyebrow="testimonial" title="The Voice of Experience" className="mb-12" />
             <TestimonialsSlider testimonials={testimonials} />

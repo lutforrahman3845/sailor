@@ -30,7 +30,7 @@ export default async function BlogPage() {
         subtitle="Guides, fleet news and stories from the water."
       />
 
-      <section className="py-14 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+      <section className="py-10 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
         {posts.map((post, i) => (
           <Reveal key={post.id} delay={Math.min(i * 0.06, 0.3)}>
           <Link
@@ -51,7 +51,7 @@ export default async function BlogPage() {
                 <RiTimeLine className="size-4" />
                 {formatDate(post.published_at)} · {post.author}
               </p>
-              <h2 className="text-lg font-bold text-secondary mt-2 group-hover:text-primary transition-colors">
+              <h2 className="text-xl font-semibold text-secondary mt-2 group-hover:text-primary transition-colors">
                 {post.title}
               </h2>
               <p className="text-sm text-secondary mt-2 flex-1">{post.excerpt}</p>

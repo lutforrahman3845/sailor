@@ -29,7 +29,7 @@ export default async function YachtsPage({
         subtitle="Every yacht comes fully crewed, provisioned and ready to sail. Pick your boat — we handle the rest."
       />
 
-      <section className="py-14">
+      <section className="py-10">
         {yachts.length === 0 ? (
           <div className="text-center py-20">
             <p className="text-xl font-bold text-secondary">

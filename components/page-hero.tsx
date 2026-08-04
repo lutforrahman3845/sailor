@@ -11,12 +11,12 @@ export default function PageHero({
   subtitle?: string;
 }) {
   return (
-    <div className="pt-14 md:pt-20 pb-4 text-center">
+    <div className="pt-10 md:pt-14 pb-4 text-center">
       <p className="anim-fade-up font-south-catalonia text-xl md:text-2xl text-primary">
         {eyebrow}
       </p>
       <h1
-        className="anim-fade-up text-3xl md:text-5xl text-secondary font-extrabold uppercase mt-2"
+        className="anim-fade-up text-3xl md:text-4xl text-secondary font-semibold mt-1"
         style={{ "--anim-delay": "0.12s" } as CSSProperties}
       >
         {title}
@@ -30,7 +30,7 @@ export default function PageHero({
         </p>
       )}
       <span
-        className="anim-fade-up block h-px w-24 mx-auto mt-8 bg-secondary/15"
+        className="anim-fade-up block h-px w-24 mx-auto mt-6 bg-secondary/15"
         style={{ "--anim-delay": "0.36s" } as CSSProperties}
         aria-hidden
       />

@@ -24,7 +24,7 @@ export default async function DestinationsPage() {
         subtitle="From the Caribbean trade winds to the Aegean meltemi — pick a coastline and we'll put a yacht under you."
       />
 
-      <section className="py-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <section className="py-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {destinations.map((d, i) => {
           const count = yachtCount(d.id);
           return (

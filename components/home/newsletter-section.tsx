@@ -3,7 +3,7 @@ import { RiMailLine, RiSendPlaneFill } from "react-icons/ri";
 
 export default function NewsletterSection() {
   return (
-    <section className="py-14">
+    <section className="py-10">
       <div className="relative w-full rounded-2xl overflow-hidden">
         <Image
           src="/assets/newsletter-pattern.webp"
@@ -19,7 +19,7 @@ export default function NewsletterSection() {
             <p className="text-xl md:text-2xl text-white font-south-catalonia font-medium mb-2">
               Offer updates
             </p>
-            <h2 className="text-3xl md:text-4xl 2xl:text-5xl text-white font-extrabold max-w-sm uppercase mb-2">
+            <h2 className="text-3xl md:text-4xl text-white font-semibold max-w-sm mb-2">
               Newsletter Subscription
             </h2>
             <p className="text-sm md:text-base font-normal text-white/90 max-w-md mb-10">
