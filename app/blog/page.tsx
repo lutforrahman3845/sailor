@@ -23,7 +23,7 @@ export default async function BlogPage() {
   const posts = await getBlogPosts();
 
   return (
-    <main className="w-full max-w-[96rem] mx-auto px-2 md:px-4">
+    <main className="container mx-auto px-2 md:px-4">
       <PageHero
         eyebrow="blogs and articles"
         title="Articles on Yacht"

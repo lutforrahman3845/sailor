@@ -22,7 +22,7 @@ export default async function YachtsPage({
   }
 
   return (
-    <main className="w-full max-w-[96rem] mx-auto px-2 md:px-4">
+    <main className="container mx-auto px-2 md:px-4">
       <PageHero
         eyebrow="our fleet"
         title="Yacht Series"
