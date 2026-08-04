@@ -26,16 +26,6 @@ body {
   background: #fff;
 }
 
-/* Tailwind derives a `.container` max-width step from every breakpoint
-   token, including our custom xs (375px) — which pinned the layout to
-   375px wide on phones between 375px and 640px. Drop that one step; the
-   sm step upwards is left untouched. */
-@media (min-width: 375px) and (max-width: 639.98px) {
-  .container {
-    max-width: none;
-  }
-}
-
 
 /* BBH Bartle is a wide display face with a single 400 weight — applied
    per-heading via .font-display, never to body copy or small titles.
