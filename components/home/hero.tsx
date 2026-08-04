@@ -11,7 +11,7 @@ const STATS = [
 
 export default function Hero() {
   return (
-    <div className="container mx-auto px-5 md:px-8">
+    <div className="container mx-auto px-2 md:px-4">
       <div className="relative rounded-2xl md:rounded-3xl overflow-hidden">
         <Image
           src="/assets/hero-banner-new.webp"
