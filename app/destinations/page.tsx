@@ -17,7 +17,7 @@ export default async function DestinationsPage() {
     yachts.filter((y) => y.destination_id === destinationId).length;
 
   return (
-    <main className="mx-5 md:mx-10 lg:mx-14">
+    <main className="container-page">
       <PageHero
         eyebrow="where to sail"
         title="Popular Destinations"

@@ -16,7 +16,7 @@ export default async function ServicesPage() {
   const services = await getServices();
 
   return (
-    <main className="mx-5 md:mx-10 lg:mx-14">
+    <main className="container-page">
       <PageHero
         eyebrow="sail with sailor"
         title="Our Services"

@@ -30,7 +30,7 @@ const SOCIALS = [
 export default function SiteFooter() {
   return (
     <footer className="bg-footer text-white">
-      <div className="px-8 md:px-10 lg:px-16 2xl:px-36 pt-16 md:pt-20 pb-10">
+      <div className="container-page pt-16 md:pt-20 pb-10">
         <div className="flex flex-col md:flex-row flex-wrap gap-12 justify-between">
           <aside className="max-w-xs">
             <Logo tone="light" />

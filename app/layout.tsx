@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
-import { BBH_Bartle, Inter } from "next/font/google";
+import { BBH_Bartle, Plus_Jakarta_Sans } from "next/font/google";
 import localFont from "next/font/local";
 import SiteHeader from "@/components/site-header";
 import SiteFooter from "@/components/site-footer";
 import "./globals.css";
 
-const inter = Inter({
+const jakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
-  variable: "--font-inter",
+  variable: "--font-jakarta",
 });
 
 /**
@@ -45,7 +45,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${bartle.variable} ${southCatalonia.variable} h-full antialiased`}
+      className={`${jakarta.variable} ${bartle.variable} ${southCatalonia.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
         <SiteHeader />

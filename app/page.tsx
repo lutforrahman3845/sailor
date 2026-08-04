@@ -35,7 +35,7 @@ export default async function HomePage() {
     <main>
       <Hero />
 
-      <div className="mx-5 md:mx-10 lg:mx-14">
+      <div className="container-page">
         <Reveal>
           <AboutSection />
         </Reveal>

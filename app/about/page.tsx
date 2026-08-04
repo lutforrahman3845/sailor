@@ -68,7 +68,7 @@ export default async function AboutPage() {
   ]);
 
   return (
-    <main className="mx-5 md:mx-10 lg:mx-14">
+    <main className="container-page">
       <PageHero
         eyebrow="about us"
         title="Sail Excellence Is Our Promise"

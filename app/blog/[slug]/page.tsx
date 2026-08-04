@@ -39,7 +39,7 @@ export default async function BlogPostPage({
   if (!post) notFound();
 
   return (
-    <main className="mx-5 md:mx-10 lg:mx-14 py-8">
+    <main className="container-page py-8">
       <article className="max-w-3xl mx-auto">
         <nav className="text-sm font-medium text-muted mb-6">
           <Link href="/blog" className="hover:text-primary">
