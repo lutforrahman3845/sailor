@@ -1,22 +1,18 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import {
-  RiAnchorLine,
-  RiArrowRightLine,
-  RiMoonClearLine,
-  RiRouteLine,
-} from "react-icons/ri";
+import { RiArrowRightLine, RiCheckLine, RiCloseLine } from "react-icons/ri";
 import PageHero from "@/components/page-hero";
 import Reveal from "@/components/reveal";
 import SectionHeading from "@/components/section-heading";
-import { getTestimonials } from "@/lib/db/queries";
+import { ServiceItem } from "@/components/home/services-section";
+import { getServices, getTestimonials } from "@/lib/db/queries";
 import TestimonialsSlider from "@/components/home/testimonials-slider";
 
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "Ten years of luxury yacht charter — who we are and why guests keep coming back.",
+    "Who Sailor is, how a crewed charter works, and exactly what is included when you book.",
 };
 
 const STATS = [
@@ -26,39 +22,60 @@ const STATS = [
   { value: "7", label: "Coastlines" },
 ];
 
-const VALUES = [
+const STEPS = [
   {
     number: "01",
-    icon: RiRouteLine,
-    title: "Crafted itineraries",
-    copy: "Routes drawn around your dates, your pace and the anchorages worth lingering in.",
+    title: "Choose your yacht",
+    copy: "Browse the fleet by coastline, guest count or budget. Every listing shows the real day rate, berths and crew size.",
   },
   {
     number: "02",
-    icon: RiAnchorLine,
-    title: "Crewed to perfection",
-    copy: "Licensed captains and trained crew on every charter — you never lift more than a glass.",
+    title: "Send an enquiry",
+    copy: "Tell us your dates and how many are sailing. We confirm availability within one business day — nothing is paid up front.",
   },
   {
     number: "03",
-    icon: RiMoonClearLine,
-    title: "Privacy & calm",
-    copy: "Quiet bays over busy marinas, and a deck that is yours alone.",
+    title: "Plan the route",
+    copy: "Your charter manager and the captain draft an itinerary around your pace, then adjust it until it is the trip you wanted.",
+  },
+  {
+    number: "04",
+    title: "Step aboard",
+    copy: "Transfers, provisioning and paperwork are done before you arrive. The crew meets you at the dock and you sail.",
   },
 ];
 
+const INCLUDED = [
+  "Professional captain and crew",
+  "All bedding, towels and linen",
+  "Welcome provisioning on day one",
+  "Paddleboards, snorkel gear and tenders",
+  "Itinerary planning with your captain",
+  "24/7 shore support while you sail",
+];
+
+const NOT_INCLUDED = [
+  "Fuel, charged at cost on return",
+  "Marina and mooring fees",
+  "Food and drink beyond the welcome pack",
+  "Crew gratuity, entirely at your discretion",
+];
+
 export default async function AboutPage() {
-  const testimonials = await getTestimonials();
+  const [testimonials, services] = await Promise.all([
+    getTestimonials(),
+    getServices(),
+  ]);
 
   return (
     <main className="mx-5 md:mx-10 lg:mx-14">
       <PageHero
         eyebrow="about us"
         title="Sail Excellence Is Our Promise"
-        subtitle="Welcome to our premier yacht charter service, where luxury meets adventure on the open seas."
+        subtitle="A crewed charter company that owns its fleet — here is who we are, how a charter works and what you get."
       />
 
-      {/* Story intro — editorial split */}
+      {/* Story */}
       <section className="py-14 md:py-20 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
         <Reveal className="relative pb-12">
           <div className="relative w-[74%] h-96 md:h-130 rounded-3xl overflow-hidden">
@@ -105,30 +122,28 @@ export default async function AboutPage() {
             on open water
           </h2>
           <p className="mt-7 text-secondary/80 leading-8">
-            Today, we are the leading brand for luxury performance motor
-            yachts. We offer the most diverse product portfolio in the world.
-            Each with its own personality, our yachts are engineered with the
-            owner in mind and standing at the helm.
+            Sailor is a crewed charter company. We own and operate every yacht
+            we list — five of them, across seven coastlines — so the boat you
+            book, the captain you sail with and the person answering your email
+            all work for the same company. Nothing is subcontracted to a broker.
           </p>
           <p className="mt-5 text-secondary/80 leading-8">
-            What started ten years ago with a single day-sailer in the Greek
-            Islands is now a crewed fleet spanning three oceans — same idea,
-            bigger horizon.
+            Crewed means you never handle the boat. A captain and crew run it,
+            cook aboard, and know which bays empty out by six. You choose the
+            coastline and the pace; everything between those two decisions is
+            ours to arrange.
+          </p>
+          <p className="mt-5 text-secondary/80 leading-8">
+            It started ten years ago with one day-sailer in the Greek Islands.
+            The fleet grew; the idea did not change.
           </p>
           <p className="mt-8 font-south-catalonia text-3xl text-secondary">
             — the Sailor crew
           </p>
-          <Link
-            href="/yachts"
-            className="group mt-6 inline-flex items-center gap-2 font-bold text-primary"
-          >
-            Meet the fleet
-            <RiArrowRightLine className="size-5 transition-transform group-hover:translate-x-1" />
-          </Link>
         </Reveal>
       </section>
 
-      {/* Editorial stats row */}
+      {/* Stats */}
       <Reveal>
         <section
           aria-label="Sailor in numbers"
@@ -147,9 +162,128 @@ export default async function AboutPage() {
         </section>
       </Reveal>
 
-      {/* Navy quote band */}
+      {/* How a charter works */}
+      <section className="py-14 md:py-20">
+        <Reveal>
+          <SectionHeading
+            eyebrow="from enquiry to anchor"
+            title="How a Charter Works"
+            className="mb-12"
+          />
+        </Reveal>
+        <ol className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-10 xl:gap-8">
+          {STEPS.map((step, i) => (
+            <Reveal key={step.number} delay={i * 0.08}>
+              <li className="border-t-2 border-primary/25 pt-5 h-full">
+                <span className="text-sm font-bold tracking-[0.3em] text-primary">
+                  {step.number}
+                </span>
+                <h3 className="mt-3 text-xl font-semibold text-secondary">
+                  {step.title}
+                </h3>
+                <p className="mt-2 text-sm leading-6 text-muted">{step.copy}</p>
+              </li>
+            </Reveal>
+          ))}
+        </ol>
+        <Reveal delay={0.3}>
+          <div className="mt-12 text-center">
+            <Link
+              href="/yachts"
+              className="inline-flex items-center gap-2 px-9 py-4 bg-primary rounded-xl text-white font-bold hover:opacity-90 transition-opacity"
+            >
+              Start with the fleet
+              <RiArrowRightLine className="size-5" />
+            </Link>
+          </div>
+        </Reveal>
+      </section>
+
+      {/* Services */}
+      <section className="py-14 md:py-20 border-t border-secondary/10">
+        <Reveal>
+          <SectionHeading
+            eyebrow="what we handle"
+            title="What We Take Care Of"
+            className="mb-12"
+          />
+        </Reveal>
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10">
+          {services.map((s, i) => (
+            <Reveal key={s.id} delay={Math.min(i * 0.06, 0.3)}>
+              <ServiceItem service={s} />
+            </Reveal>
+          ))}
+        </div>
+        <Reveal delay={0.3}>
+          <div className="mt-12 text-center">
+            <Link
+              href="/services"
+              className="group inline-flex items-center gap-2 font-bold text-primary"
+            >
+              See all services in detail
+              <RiArrowRightLine className="size-5 transition-transform group-hover:translate-x-1" />
+            </Link>
+          </div>
+        </Reveal>
+      </section>
+
+      {/* What's included */}
+      <section className="py-14 md:py-20 border-t border-secondary/10">
+        <Reveal>
+          <SectionHeading
+            eyebrow="no surprises"
+            title="What's Included"
+            className="mb-12"
+          />
+        </Reveal>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <Reveal>
+            <div className="h-full p-8 rounded-2xl bg-primary/5 ring-1 ring-primary/15">
+              <h3 className="text-lg font-semibold text-secondary">
+                Included in every charter
+              </h3>
+              <ul className="mt-5 space-y-3">
+                {INCLUDED.map((item) => (
+                  <li key={item} className="flex gap-3 text-secondary/85">
+                    <RiCheckLine
+                      className="size-5 shrink-0 text-primary mt-0.5"
+                      aria-hidden
+                    />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </Reveal>
+          <Reveal delay={0.12}>
+            <div className="h-full p-8 rounded-2xl bg-gray-50 ring-1 ring-secondary/10">
+              <h3 className="text-lg font-semibold text-secondary">
+                Billed separately
+              </h3>
+              <ul className="mt-5 space-y-3">
+                {NOT_INCLUDED.map((item) => (
+                  <li key={item} className="flex gap-3 text-secondary/85">
+                    <RiCloseLine
+                      className="size-5 shrink-0 text-muted mt-0.5"
+                      aria-hidden
+                    />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              <p className="mt-6 text-sm text-muted leading-6">
+                We quote these as an estimated running cost with your itinerary,
+                so the total is clear before you commit.
+              </p>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* Quote band */}
       <Reveal>
-        <section className="relative mt-14 md:mt-20 rounded-3xl overflow-hidden bg-secondary">
+        <section className="relative mt-4 rounded-3xl overflow-hidden bg-secondary">
           <Image
             src="/assets/page-hero-about.webp"
             alt=""
@@ -166,46 +300,17 @@ export default async function AboutPage() {
               and they are ours to get right.
             </p>
             <Link
-              href="/yachts"
+              href="/contact"
               className="inline-block mt-8 px-9 py-4 bg-primary rounded-xl text-white font-bold hover:opacity-90 transition-opacity"
             >
-              Meet the Fleet
+              Talk to a charter manager
             </Link>
           </div>
         </section>
       </Reveal>
 
-      {/* Values row */}
-      <section className="py-14 md:py-20">
-        <Reveal>
-          <SectionHeading
-            eyebrow="why sail with sailor"
-            title="It's the Details"
-            className="mb-10"
-          />
-        </Reveal>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12">
-          {VALUES.map((v, i) => (
-            <Reveal key={v.number} delay={i * 0.1}>
-              <div className="border-t border-secondary/15 pt-6">
-                <div className="flex items-center justify-between">
-                  <span className="text-sm font-bold tracking-[0.3em] text-primary">
-                    {v.number}
-                  </span>
-                  <v.icon className="size-6 text-primary" aria-hidden />
-                </div>
-                <h3 className="mt-4 text-xl font-semibold text-secondary">
-                  {v.title}
-                </h3>
-                <p className="mt-2 text-sm leading-6 text-muted">{v.copy}</p>
-              </div>
-            </Reveal>
-          ))}
-        </div>
-      </section>
-
       {/* Testimonials */}
-      <section className="pb-14">
+      <section className="py-14">
         <Reveal>
           <SectionHeading
             eyebrow="testimonial"
