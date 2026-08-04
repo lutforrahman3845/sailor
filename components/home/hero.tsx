@@ -6,7 +6,7 @@ import { RiArrowRightLine, RiStarFill } from "react-icons/ri";
 
 export default function Hero() {
   return (
-    <div className=" px-2 md:px-4">
+    <div className=" container mx-auto px-2 md:px-4">
       <div className="relative rounded overflow-hidden">
         <Image
           src="/assets/heroSection.jpg"
