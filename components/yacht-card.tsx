@@ -7,7 +7,7 @@ export default function YachtCard({ yacht }: { yacht: YachtWithDestination }) {
   return (
     <Link
       href={`/yachts/${yacht.slug}`}
-      className="group block p-3 bg-white rounded-2xl shadow-sm ring-1 ring-gray-100 transition duration-300 hover:-translate-y-1 hover:shadow-md"
+      className="group flex h-full flex-col p-3 bg-white rounded-2xl shadow-sm ring-1 ring-gray-100 transition duration-300 hover:-translate-y-1 hover:shadow-md"
     >
       <div className="relative w-full aspect-4/5 rounded-t-2xl rounded-bl-2xl overflow-hidden">
         <Image
@@ -28,14 +28,14 @@ export default function YachtCard({ yacht }: { yacht: YachtWithDestination }) {
         </div>
       </div>
 
-      <h3 className="text-xl md:text-2xl text-secondary font-bold mt-3 group-hover:text-primary transition-colors">
+      <h3 className="text-lg md:text-xl text-secondary font-bold mt-3 group-hover:text-primary transition-colors">
         {yacht.name}
       </h3>
       <p className="text-muted text-sm font-medium flex items-center gap-1.5 mt-1 mb-4">
         <RiMapPin2Fill className="size-4 text-primary shrink-0" />
         {yacht.destination.name}
       </p>
-      <div className="flex gap-5 items-center pb-1">
+      <div className="mt-auto flex gap-5 items-center pb-1">
         <p className="text-secondary text-sm font-semibold flex items-center gap-1.5">
           <RiGroupLine className="size-4.5 text-primary" />
           {yacht.max_guests} Guests

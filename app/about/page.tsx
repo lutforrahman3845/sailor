@@ -76,7 +76,7 @@ export default async function AboutPage() {
       />
 
       {/* Story */}
-      <section className="py-14 md:py-20 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+      <section className="py-14 md:py-20 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
         <Reveal className="relative pb-12">
           <div className="relative w-[74%] h-80 md:h-104 rounded-3xl overflow-hidden">
             <Image
@@ -95,16 +95,6 @@ export default async function AboutPage() {
               sizes="(min-width: 1024px) 25vw, 50vw"
               className="object-cover"
             />
-          </div>
-          <div className="absolute top-6 right-2 md:right-10 size-24 md:size-28 rounded-full bg-white shadow-xl ring-1 ring-black/5 flex flex-col items-center justify-center text-center">
-            <span className="text-3xl md:text-4xl font-extrabold text-primary leading-none">
-              10
-            </span>
-            <span className="mt-1 text-[9px] md:text-[10px] font-semibold uppercase tracking-[0.2em] text-muted">
-              years
-              <br />
-              at sea
-            </span>
           </div>
         </Reveal>
 

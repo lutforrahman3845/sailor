@@ -31,7 +31,7 @@ export default async function DestinationsPage() {
             <Reveal
               key={d.id}
               delay={Math.min(i * 0.06, 0.3)}
-              className="bg-white rounded-2xl shadow-sm ring-1 ring-gray-100 overflow-hidden flex flex-col"
+              className="h-full bg-white rounded-2xl shadow-sm ring-1 ring-gray-100 overflow-hidden flex flex-col"
             >
               <div className="relative h-64">
                 <Image

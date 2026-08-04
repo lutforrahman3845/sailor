@@ -32,7 +32,7 @@ export default async function BlogPage() {
 
       <section className="py-10 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
         {posts.map((post, i) => (
-          <Reveal key={post.id} delay={Math.min(i * 0.06, 0.3)}>
+          <Reveal key={post.id} delay={Math.min(i * 0.06, 0.3)} className="h-full">
           <Link
             href={`/blog/${post.slug}`}
             className="bg-white rounded-2xl shadow-sm ring-1 ring-gray-100 overflow-hidden flex flex-col group h-full"

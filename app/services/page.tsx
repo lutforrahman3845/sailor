@@ -29,7 +29,7 @@ export default async function ServicesPage() {
             <Reveal
               key={s.id}
               delay={Math.min(i * 0.06, 0.3)}
-              className="p-6 bg-white rounded-2xl shadow-sm ring-1 ring-gray-100"
+              className="h-full p-6 bg-white rounded-2xl shadow-sm ring-1 ring-gray-100"
             >
               <ServiceItem service={s} />
             </Reveal>

@@ -12,7 +12,7 @@ export default function AboutSection() {
       <SectionHeading eyebrow="about us" title="Sail excellence is our promise" />
 
       <div className="mt-10 flex flex-col xl:flex-row items-center gap-8">
-        <div className="w-full xl:w-7/12 md:grid md:grid-cols-8 gap-12">
+        <div className="w-full xl:w-7/12 md:grid md:grid-cols-8 gap-6">
           <div className="col-span-4 hidden md:block">
             <div className="relative w-full aspect-4/5 rounded-2xl overflow-hidden">
               <Image
