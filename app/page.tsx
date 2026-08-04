@@ -44,7 +44,7 @@ export default async function HomePage() {
           <Reveal>
             <SectionHeading eyebrow="our popular" title="Yacht Series" />
           </Reveal>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 mt-8 md:mt-14 gap-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 mt-8 md:mt-14 gap-6">
             {featuredYachts.map((yacht, i) => (
               <Reveal key={yacht.id} delay={Math.min(i * 0.06, 0.3)}>
                 <YachtCard yacht={yacht} />

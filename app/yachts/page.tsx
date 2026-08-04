@@ -40,7 +40,7 @@ export default async function YachtsPage({
             </Link>
           </div>
         ) : (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {yachts.map((y, i) => (
               <Reveal key={y.id} delay={Math.min(i * 0.06, 0.3)}>
                 <YachtCard yacht={y} />
