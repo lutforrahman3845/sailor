@@ -16,7 +16,7 @@ export default function PageHero({
         {eyebrow}
       </p>
       <h1
-        className="anim-fade-up text-3xl md:text-4xl text-secondary font-semibold mt-1"
+        className="anim-fade-up font-display text-xl md:text-3xl text-secondary mt-2 max-w-3xl mx-auto leading-snug"
         style={{ "--anim-delay": "0.12s" } as CSSProperties}
       >
         {title}

@@ -33,7 +33,7 @@ export default function SeasonalOffer() {
             <p className="text-xl md:text-2xl text-white font-south-catalonia font-medium mb-2">
               Seasonal Offer
             </p>
-            <h2 className="text-3xl md:text-4xl text-white font-semibold max-w-sm mb-8">
+            <h2 className="font-display text-xl md:text-2xl text-white max-w-sm mb-8 leading-snug">
               15% off for booking this summer.
             </h2>
             <div className="flex items-center gap-8 xl:gap-12 mb-10">

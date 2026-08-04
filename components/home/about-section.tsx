@@ -44,7 +44,7 @@ export default function AboutSection() {
         </div>
 
         <div className="w-full xl:w-[35%]">
-          <h3 className="md:max-w-xl text-2xl md:text-3xl lg:text-4xl text-secondary font-semibold mt-8 xl:mt-0">
+          <h3 className="font-display md:max-w-xl text-lg md:text-xl lg:text-2xl text-secondary mt-8 xl:mt-0 leading-snug">
             Book Your Dream Yacht Today!
           </h3>
           <p className="md:max-w-xl text-base md:text-lg font-normal text-secondary/90 mt-3 leading-relaxed">

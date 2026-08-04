@@ -1,19 +1,26 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, Montserrat } from "next/font/google";
+import { BBH_Bartle, Inter } from "next/font/google";
 import localFont from "next/font/local";
 import SiteHeader from "@/components/site-header";
 import SiteFooter from "@/components/site-footer";
 import "./globals.css";
 
-const montserrat = Montserrat({
+const inter = Inter({
   subsets: ["latin"],
-  variable: "--font-montserrat",
+  variable: "--font-inter",
 });
 
-const cormorant = Cormorant_Garamond({
+/**
+ * Display face — all-caps, very wide, single 400 weight. Never set a bold
+ * on it, and keep headline copy short. Next has no metric overrides for it,
+ * so the fallback chain is declared explicitly.
+ */
+const bartle = BBH_Bartle({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  variable: "--font-cormorant",
+  weight: "400",
+  display: "swap",
+  fallback: ["system-ui", "sans-serif"],
+  variable: "--font-bartle",
 });
 
 const southCatalonia = localFont({
@@ -38,7 +45,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${montserrat.variable} ${cormorant.variable} ${southCatalonia.variable} h-full antialiased`}
+      className={`${inter.variable} ${bartle.variable} ${southCatalonia.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
         <SiteHeader />

@@ -76,7 +76,7 @@ export default async function YachtDetailPage({
 
         <div>
           <p className="font-south-catalonia text-xl md:text-2xl text-primary">our fleet</p>
-          <h1 className="text-3xl md:text-4xl font-semibold text-secondary mt-1">
+          <h1 className="font-display text-xl md:text-3xl text-secondary mt-2 leading-snug">
             {yacht.name}
           </h1>
           <p className="text-secondary text-base font-medium flex items-center gap-2 mt-3">

@@ -15,26 +15,25 @@
 }
 
 @theme inline {
-  --font-montserrat: var(--font-montserrat);
-  --font-cormorant: var(--font-cormorant);
+  --font-inter: var(--font-inter);
+  --font-bartle: var(--font-bartle);
   --font-south-catalonia: var(--font-south-catalonia);
 }
 
 body {
-  font-family: var(--font-montserrat), sans-serif;
+  font-family: var(--font-inter), sans-serif;
   color: var(--color-secondary);
   background: #fff;
 }
 
-/* luxury serif display for headings — in the base layer so utility
-   classes (e.g. .font-south-catalonia) still override */
-@layer base {
-  h1,
-  h2,
-  h3 {
-    font-family: var(--font-cormorant), Georgia, serif;
-    letter-spacing: 0.01em;
-  }
+/* BBH Bartle is a wide display face with a single 400 weight — applied
+   per-heading via .font-display, never to body copy or small titles.
+   font-synthesis is off so a stray bold can't smear it. */
+.font-display {
+  font-family: var(--font-bartle), sans-serif;
+  font-weight: 400;
+  font-synthesis: none;
+  letter-spacing: 0.01em;
 }
 
 /* visible keyboard focus everywhere */

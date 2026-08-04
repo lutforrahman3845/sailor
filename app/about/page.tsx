@@ -96,9 +96,9 @@ export default async function AboutPage() {
             <span className="h-px w-10 bg-primary" aria-hidden />
             Our story
           </p>
-          <h2 className="mt-5 text-3xl md:text-4xl font-semibold text-secondary leading-tight">
+          <h2 className="font-display mt-5 text-xl md:text-2xl text-secondary leading-snug">
             A decade of{" "}
-            <span className="font-south-catalonia font-medium text-primary text-4xl md:text-5xl">
+            <span className="font-south-catalonia font-medium text-primary text-3xl md:text-4xl">
               quiet luxury
             </span>
             <br />
@@ -136,7 +136,7 @@ export default async function AboutPage() {
         >
           {STATS.map((s) => (
             <div key={s.label} className="px-4 text-center">
-              <p className="font-cormorant text-4xl md:text-5xl font-bold text-secondary">
+              <p className="font-display text-3xl md:text-4xl text-secondary">
                 {s.value}
               </p>
               <p className="mt-3 text-[11px] font-semibold uppercase tracking-[0.3em] text-muted">

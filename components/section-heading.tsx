@@ -12,7 +12,7 @@ export default function SectionHeading({
       <p className="text-xl md:text-2xl text-primary text-center font-south-catalonia font-medium">
         {eyebrow}
       </p>
-      <h2 className="text-3xl md:text-4xl text-secondary text-center font-semibold mt-1">
+      <h2 className="font-display text-xl md:text-2xl text-secondary text-center mt-2 max-w-3xl mx-auto leading-snug">
         {title}
       </h2>
     </div>

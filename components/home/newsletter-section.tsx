@@ -19,7 +19,7 @@ export default function NewsletterSection() {
             <p className="text-xl md:text-2xl text-white font-south-catalonia font-medium mb-2">
               Offer updates
             </p>
-            <h2 className="text-3xl md:text-4xl text-white font-semibold max-w-sm mb-2">
+            <h2 className="font-display text-xl md:text-2xl text-white max-w-sm mb-2 leading-snug">
               Newsletter Subscription
             </h2>
             <p className="text-sm md:text-base font-normal text-white/90 max-w-md mb-10">
