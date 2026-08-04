@@ -43,7 +43,7 @@ export default async function YachtDetailPage({
   const [primary, ...gallery] = yacht.images;
 
   return (
-    <main className="container-page py-8">
+    <main className="container mx-auto px-5 md:px-8 py-8">
       <nav className="text-sm font-medium text-muted mb-6">
         <Link href="/yachts" className="hover:text-primary">
           Yachts

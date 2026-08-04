@@ -35,7 +35,7 @@ export default async function HomePage() {
     <main>
       <Hero />
 
-      <div className="container-page">
+      <div className="container mx-auto px-5 md:px-8">
         <Reveal>
           <AboutSection />
         </Reveal>
