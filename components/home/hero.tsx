@@ -22,7 +22,7 @@ export default function Hero() {
           className="object-cover -z-10 anim-hero-zoom"
         />
         {/* legibility scrim */}
-        <div className="absolute inset-0 -z-10 bg-gradient-to-b from-secondary/50 via-secondary/10 to-secondary/70" />
+        <div className="absolute inset-0 -z-10 bg-linear-to-b from-secondary/50 via-secondary/10 to-secondary/70" />
 
         <div className="px-6 md:px-14 pt-24 pb-32 sm:pt-28 sm:pb-36 md:pt-36 md:pb-44 lg:pt-44 lg:pb-56 text-center">
           <p className="anim-fade-up font-south-catalonia text-2xl md:text-3xl text-white/95">
