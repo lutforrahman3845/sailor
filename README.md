@@ -1,6 +1,6 @@
-# Sailor — Yacht Charter & Booking Website Template
+# Sailor — Yacht Charter & Booking Website 
 
-Sailor is a modern, multi-page yacht charter website template built with **Next.js 16 (App Router)**, **React 19**, **TypeScript**, and **Tailwind CSS v4**. It ships as a complete company website — fleet listing, destinations, services, blog, and contact — powered by a clean, data-driven architecture that is ready to connect to a real backend.
+Sailor is a modern, multi-page yacht charter website built with **Next.js 16 (App Router)**, **React 19**, **TypeScript**, and **Tailwind CSS v4**. It ships as a complete company website — fleet listing, destinations, services, blog, and contact — powered by a clean, data-driven architecture that is ready to connect to a real backend.
 
 > **Licensing:** Sailor is a commercial template. See [LICENSE.md](LICENSE.md) for what you may and may not do with it.
 
